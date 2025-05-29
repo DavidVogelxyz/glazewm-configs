@@ -109,6 +109,10 @@ workspaces:
   - name: '9'
 
 window_rules:
+  - commands: ["move --direction left"]
+    match:
+      # Opens all windows on the left, mimicking `dwm` configs.
+      - window_process: { regex: ".*" }
   - commands: ['ignore']
     match:
       # Ignores any Zebar windows.
